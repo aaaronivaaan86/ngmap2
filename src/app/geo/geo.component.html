@@ -1,0 +1,51 @@
+<div class="container">
+
+  <div class="col-lg-6">
+    <div class="form-group">
+      <label for="sltState">Selecciona un estado</label>
+      <select name="sltState"
+              class="form-control" 
+              #sltState="ngModel"
+              ngModel="sltState"
+              (change)="onChange(sltState)">
+        <option value="-1" >Select Option</option>
+        <option  name="map.mapProperty" *ngFor="let map of natListMapVm" [ngValue]="map">
+          {{map.mapTitle}}
+        </option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="col-lg-6">
+    <label for="slctCountry">Selecciona un país</label>
+    <select name="slctCountry"
+            class="form-control"
+            #slctCountry = "ngModel"
+            ngModel="slctCountry"
+            (change) = "onInternationalChange(slctCountry)">
+            <option value="-1">Select Option</option>
+            <option name="map.mapProperty" *ngFor="let intMap of intListMapVm" [ngValue] = "intMap" >
+              {{intMap.mapTitle}}
+            </option>
+    </select>
+  </div>
+
+<br>
+<br>
+
+  <!-- <div id="map" class="mapboxgl-map"></div> -->
+  <agm-map [latitude]= "lat" [longitude]="long" [zoom]="zoom" [styles]= "mapStyle" >
+    
+    <agm-data-layer *ngIf="geoJsonObject" 
+                    [geoJson] = "geoJsonObject"
+                    [style]="styleFunc">      
+    </agm-data-layer>
+
+    <agm-data-layer *ngIf="geoIntJsonObject" 
+                    [geoJson] = "geoIntJsonObject"
+                    [style]= "intStyleFunc">
+    </agm-data-layer>
+    
+  </agm-map> 
+
+</div>

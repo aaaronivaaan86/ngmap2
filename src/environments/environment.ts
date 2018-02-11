@@ -4,5 +4,14 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  dbConfig: {
+    apiKey: 'AIzaSyBEMFBJPUJsuCHgKPtoXnF86uJKm0pRnqU',
+    authDomain: 'mydash-1509383833439.firebaseapp.com',
+    databaseURL: 'https://mydash-1509383833439.firebaseio.com',
+    projectId: 'mydash-1509383833439',
+    storageBucket: 'mydash-1509383833439.appspot.com',
+    messagingSenderId: '1052326948049'
+  },
+  agmConfig: {apiKey: 'AIzaSyAxsdWvEuAIwmFUBXNMtLoDX0_1NXv-vYw'}
 };

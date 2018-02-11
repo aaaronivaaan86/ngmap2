@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.2",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
@@ -21,8 +22,20 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@types/underscore": "^1.8.7",
+    "angularfire2": "^5.0.0-rc.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "chart.js": "^2.7.1",
     "core-js": "^2.4.1",
+    "firebase": "^4.5.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "ng2-charts": "^1.6.0",
+    "ng2-linq": "^1.0.0",
+    "ng2-smart-table": "^1.2.2",
     "rxjs": "^5.5.6",
+    "tether": "^1.4.3",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {

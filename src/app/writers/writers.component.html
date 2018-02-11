@@ -1,0 +1,23 @@
+
+<div class="text-center">
+  <button type="button" class="btn btn-large  btn-outline-info" (click)="getWriters()">
+    <h1>
+      Ver Buscador de escritores
+
+    </h1>
+  </button>
+</div>
+
+<br>
+<br>
+
+<div class="text-center" *ngIf="showTable">
+
+  <img [src]="loadingSrc" alt=""  *ngIf="writersArr == undefined">
+
+  <div *ngIf ="writersArr != undefined" > 
+    <ng2-smart-table [settings]="settings " [source]="writersArr"></ng2-smart-table>
+  </div>
+
+</div>
+

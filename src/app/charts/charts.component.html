@@ -1,0 +1,120 @@
+  <div>
+    
+  <!-- ********************* -->
+  <!-- GENDER Bar Chart -->
+  <!-- ********************* -->
+  <div class="row">
+
+
+  <div class="col-lg-4" *ngIf="fBarValue != null">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [colors]="barChartColors"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartBarHovered($event)"
+            (chartClick)="chartBarClicked($event)">
+    </canvas>
+  </div>
+
+    <!-- ********************* -->
+    <!-- LINE Demo Chart -->
+    <!-- ********************* -->
+    <div class="col-lg-6"  *ngIf="fBarValue != null && proofLine "  >
+      <canvas
+          baseChart
+          [chartType]="chartLineType"
+          [datasets]="chartLineData"
+          [labels]="chartLineLabels"
+          [options]="chartLineOptions"
+          [colors]="lineColors"
+          [legend]="true"
+          (chartClick)="onLineChartClick($event)">
+      </canvas>
+    </div>
+</div>
+
+
+  <div class="row">
+
+    <!-- ********************* -->
+    <!-- DOUGHNUT Chart -->
+    <!-- ********************* -->
+    <div class="col-lg-4" *ngIf="fBarValue != null && zoneChart" >
+      <canvas baseChart
+              [data]="pieZoneChartData"
+              [labels]="pieZoneChartLabels"
+              [colors]="pieZoneColors"
+              [chartType]="pieChartType"
+              (chartHover)="chartPieHovered($event)"
+              (chartClick)="chartPieClicked($event)"></canvas>
+    </div>
+
+    <!-- Ra -->
+    <div class="col-lg-4" *ngIf="fBarValue != null && raChart" >
+      <canvas baseChart
+              [data]="pieRaChartData"
+              [labels]="pieRaChartLabels"
+              [colors]="pieRaColors"
+              [chartType]="pieChartType"
+              (chartHover)="chartPieHovered($event)"
+              (chartClick)="chartPieClicked($event)"></canvas>
+    </div>
+
+    <!-- Rd -->
+    <div class="col-lg-4" *ngIf="fBarValue != null && rdChart" >
+      <canvas baseChart
+              [data]="pieRdChartData"
+              [labels]="pieRdChartLabels" 
+              [colors]="pieRdColors"
+              [chartType]="pieChartType"
+              (chartHover)="chartPieHovered($event)"
+              (chartClick)="chartPieClicked($event)"></canvas>
+    </div>
+
+    <!-- Continents -->
+    <div class="col-lg-4" *ngIf="fBarValue != null && contChart" >
+      <canvas baseChart
+              [data]="pieContChartData"
+              [labels]="pieContChartLabels" 
+              [colors]="pieContColors"
+              [chartType]="pieChartType"
+              (chartHover)="chartPieHovered($event)"
+              (chartClick)="chartPieClicked($event)"></canvas>
+    </div>
+
+
+
+    <!-- ********************* -->
+    <!-- COUNTRY Bar Chart -->
+    <!-- ********************* -->
+
+    <div class="col-lg-6" *ngIf="fBarValue != null">
+      <canvas baseChart
+              [datasets]="barCountryChartData"
+              [labels]="barCountryChartLabels"
+              [options]="barChartOptions"
+              [colors]="barCountryChartColors"
+              [legend]="barCountryChartLegend"
+              [chartType]="barCountryChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+</div>
